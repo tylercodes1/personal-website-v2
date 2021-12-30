@@ -8,8 +8,14 @@ After 2010, SPA frameworks started showing up (React, Angular, Vue). Once loaded
 
 <b>Architecture needed to support SPA are not the same to support server side rendering</b>
 
-SPA Architecture:
-
+<details>
+<summary><b>SPA Architecture Image</b></summary>
+![SPA architecture](https://personal-website-v2-topaz.vercel.app//SPAArchitecture.PNG)
+</details>
+<details>
+<summary><b>SSR Architecture Image</b></summary>
+![SPA architecture](https://personal-website-v2-topaz.vercel.app//SSRArchitecture.PNG)
+</details>
 <!-- LINKS -->
 
 [ssr vs ssg]: https://www.youtube.com/watch?v=YatDFsPPy0E

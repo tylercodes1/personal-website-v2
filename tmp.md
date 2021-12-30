@@ -74,6 +74,33 @@ if (dib === "O(2^n)"
 </details>
 </details>
 
+<details open>
+<summary><b>Memoized Solution</b></summary>
+
+```js
+const fib = (n, memo = {}) => {
+	if (n in memo) return memo[n];
+	if (n <= 2) return 1;
+
+	memo[n] = fib(n - 1, memo) + fib(n - 2, memo);
+	return memo[n];
+};
+
+fib(6); // 8
+fib(7); // 13
+fib(8); // 21
+fib(50); // 12586269025
+```
+
+<b>Stepped through Fib memoized</b>
+![Fib Memoized visualized](https://personal-website-v2-topaz.vercel.app/fibMemoizedExplained.PNG)
+
+Every time we compute the value for a number `n` we store its result as a cached answer for future use. In the above example 3 is stored in the memo object (map) and can be effectively thought of as "cached". The result of storing previously computed values results in a time complexity of O(n) and space complexity of O(n) in the following tree
+
+![Fib final](https://personal-website-v2-topaz.vercel.app/fibMemoizedTimeComplexity.PNG)
+
+</details>
+
 ## Tabulation {#tabulation}
 
 <!-- External Links  -->

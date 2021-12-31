@@ -30,6 +30,8 @@ In response to SSR, some people said `this is too complicated, let's get back to
 | Respond to User-Agent (Server Detects Browser, Geography) | ~~Respond to User Agent~~                  |
 | ~~KISS~~                                                  | KISS (Shipping Only Static Assets via CDN) |
 
+**SSR granular architecture:**
+
 ![SSR Architecture Granular](https://personal-website-v2-topaz.vercel.app//SSRArchGranular.PNG)
 
 **"Static" data** that you're trying to serve. Data could come from a database (headless cms, transactional store, data warehouse). Markdown Files that convert to HTML.
@@ -47,6 +49,27 @@ In response to SSR, some people said `this is too complicated, let's get back to
 2. Bottom is Server side. A js file with resources.
 
 **Run Time** Load HTML. Hydrate to SPA. Load client state. Cache info in server side.
+
+**SSG granular architecture:**
+
+![SSG Architecture Granular](https://personal-website-v2-topaz.vercel.app//SSGArchGranular.PNG)
+
+**Static Data and Runtime sections are the same**
+
+**Design Time** - Slightly different. Dynamic routes need to tell build system which dynamic routes will be generated. Blog post will generate without additional configuration. However, details of last 10 blog posts, you will need to specify ID of last 10. SSR processes on request, SSG will require it.
+
+**Build System** - Right side different: 3 new items:
+
+1. Generate SPA routes from Router config.
+2. Generate Dynamic Dynamic Routes from data and config
+3. Generate Static HTML from templates.
+
+SSR logic embedded in server process. SSG logic embedded in HTML.
+
+**Deploy** SSG does not require server. SSG Requires HTML for every route it knows about (static and dynamic routes)
+
+-  SSG is faster, lower cost, and has less operational risk.
+-  Both are more complex than SPA.
 
 <details>
 <summary><b>SPA Architecture Image</b></summary>

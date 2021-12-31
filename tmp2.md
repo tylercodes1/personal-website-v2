@@ -32,13 +32,33 @@ In response to SSR, some people said `this is too complicated, let's get back to
 
 ![SSR Architecture Granular](https://personal-website-v2-topaz.vercel.app//SSRArchGranular.PNG)
 
+**"Static" data** that you're trying to serve. Data could come from a database (headless cms, transactional store, data warehouse). Markdown Files that convert to HTML.
+
+**Design Time** Template to the structure of the pages. HTML, PUG, Handlebars. Bunch of configuration is required.
+
+**Build Process**
+
+1. Left hand side - Basic transpilation (from js). Transpiling from source code written to something browser can run. Items
+2. Right hand side - Hydration for SSR. All static content must be bundled into JS. Take all HTML Content from routes, put in JS Format. Server side can display HTML pages from "hydrated JS Object"
+
+**Deploy**
+
+1. Above is "client side". Content that gets put in CDN.
+2. Bottom is Server side. A js file with resources.
+
+**Run Time** Load HTML. Hydrate to SPA. Load client state. Cache info in server side.
+
 <details>
 <summary><b>SPA Architecture Image</b></summary>
-![SPA architecture](https://personal-website-v2-topaz.vercel.app//SPAArchitecture.PNG)
+
+![SPA architecture](https://personal-website-v2-topaz.vercel.app/SPAArchitecture.PNG)
+
 </details>
 <details>
 <summary><b>SSR Architecture Image</b></summary>
-![SPA architecture](https://personal-website-v2-topaz.vercel.app//SSRArchitecture.PNG)
+
+![SPA architecture](https://personal-website-v2-topaz.vercel.app/SSRArchitecture.PNG)
+
 </details>
 <!-- LINKS -->
 

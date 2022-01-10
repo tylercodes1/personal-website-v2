@@ -1,7 +1,14 @@
+import Head from "next/head";
+
 export default function Lists(props) {
 	console.log(props, props.id, props.color, props.image);
 	return (
 		<>
+			<Head>
+				<title>
+					{props.id} {props.color}
+				</title>
+			</Head>
 			<div>lists</div>
 			{/* <div>{props}</div> */}
 			<div>{props.id}</div>

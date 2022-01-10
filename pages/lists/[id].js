@@ -16,15 +16,19 @@ export default function ListItem({ testItem }) {
 export async function getStaticPaths() {
 	return {
 		paths: [{ params: { id: "testy" } }],
-		fallback: false,
+		fallback: "blocking",
 	};
 }
 
 export async function getStaticProps({ params }) {
-	console.log(params);
-	const req = await fetch(`http://localhost:3000/test.json`);
+	const req = await fetch(`http://localhost:3000/${params.id}.json`);
 	const data = await req.json();
-	console.log(data);
+
+	if (!data)
+		return {
+			notFound: true,
+		};
+
 	return {
 		props: {
 			id: "test",

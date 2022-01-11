@@ -9,7 +9,7 @@ export default function Home() {
 				<title>Tyler Kim - Full Stack Web Developer 2022</title>
 				<meta
 					name="description"
-					content="I'm a full stack web developer who can help you build a website from the ground up."
+					content="My name is Tyler Kim. I'm a full stack web developer with 1 year of experience. I'm currently at Blue Nile, and I love furthering my craft. I can also help you build a website from the ground up."
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
@@ -17,7 +17,7 @@ export default function Home() {
 			<main className={styles.main}>
 				<h1 className={styles.title}>
 					Hi, I&apos;m Tyler,
-					<br /> But you can call me any time!
+					<br /> but you can call me any time!
 				</h1>
 			</main>
 		</div>

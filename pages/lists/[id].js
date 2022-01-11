@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 export default function ListItem({ testItem }) {
 	const router = useRouter();
 	const { id } = router.query;
+	console.log(process.env.REACT_APP_HOSTNAME);
+	console.log(process.env);
 	console.log(testItem);
 	return (
 		<>
@@ -21,15 +23,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	const req = await fetch(`http://localhost:3000/${params.id}.json`);
-	console.log("here");
+	const req = await fetch(
+		`http://${process.env.REACT_APP_HOSTNAME}/${params.id}.json`
+	);
+
 	let data;
 	try {
 		data = await req.json();
 	} catch (e) {
 		data = "";
 	}
-	console.log("here2");
 
 	if (!data)
 		return {

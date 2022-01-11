@@ -19,8 +19,22 @@ export default function Lists(props) {
 }
 export async function getStaticProps({ params }) {
 	console.log(params);
-	const req = await fetch(`http://localhost:3000/test.json`);
-	const data = await req.json();
+	const req = await fetch(
+		`http://${process.env.REACT_APP_HOSTNAME}/test.json`
+	);
+
+	let data;
+	try {
+		data = await req.json();
+	} catch (e) {
+		data = "";
+	}
+
+	if (!data)
+		return {
+			notFound: true,
+		};
+
 	console.log(data);
 	return {
 		props: {

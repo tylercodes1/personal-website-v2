@@ -32,7 +32,7 @@ fib(50); // (This takes forever under current implementation)
 ```
 
 This solution is particularly slow O(2^n^) as demonstrated visually in the tree below. Recursively, you can see that there are many repeating computations of trees that we may have already previously calculated:
-![Fibonnaci Recursive Solution in Tree Form](https://personal-website-v2-topaz.vercel.app/RecursiveTree.PNG)
+![Fibonnaci Recursive Solution in Tree Form](https://tylerkim.dev/RecursiveTree.PNG)
 
 <details>
 <summary><b>Proof of Time/Space complexity</b></summary>
@@ -47,7 +47,7 @@ const dib = (n) => {
 
 This recursive function decrements n every call, and goes until it hits 1 or 0. It can be said to have O(n) time and space complexity (function calls added to the stack count as space) as shown in the diagram below.
 
-![dib](https://personal-website-v2-topaz.vercel.app/dib.PNG)
+![dib](https://tylerkim.dev/dib.PNG)
 
 <br><b>2 Recursive Calls</b>
 
@@ -60,10 +60,10 @@ const dib2 = (n) => {
 ```
 
 The following algorithm calls itself twice every function call. And can be modeled as O(2^n^) in the following tree below:
-![dib2 time complexity](https://personal-website-v2-topaz.vercel.app/dib2Time.PNG)
+![dib2 time complexity](https://tylerkim.dev/dib2Time.PNG)
 
 As you can see, it calls it self twice every iteration roughly `n` times. As for space complexity, the stack actually pops the base case off the tree, and replaces the popped funciton with a new one. It only ever calls the height of the tree, as function calls are not compounded on the stack:
-![dib2 space complexity](https://personal-website-v2-topaz.vercel.app/dib2Space.PNG)
+![dib2 space complexity](https://tylerkim.dev/dib2Space.PNG)
 
 ```js
 if (dib === "O(2^n)"
@@ -93,11 +93,11 @@ fib(50); // 12586269025
 ```
 
 <b>Stepped through Fib memoized</b>
-![Fib Memoized visualized](https://personal-website-v2-topaz.vercel.app/fibMemoizedExplained.PNG)
+![Fib Memoized visualized](https://tylerkim.dev/fibMemoizedExplained.PNG)
 
 Every time we compute the value for a number `n` we store its result as a cached answer for future use. In the above example 3 is stored in the memo object (map) and can be effectively thought of as "cached". The result of storing previously computed values results in a time complexity of O(n) and space complexity of O(n) in the following tree
 
-![Fib final](https://personal-website-v2-topaz.vercel.app/fibMemoizedTimeComplexity.PNG)
+![Fib final](https://tylerkim.dev/fibMemoizedTimeComplexity.PNG)
 
 </details>
 

@@ -74,7 +74,7 @@ if (dib === "O(2^n)"
 </details>
 </details>
 
-<details open>
+<details>
 <summary><b>Memoized Solution</b></summary>
 
 ```js
@@ -101,7 +101,53 @@ Every time we compute the value for a number `n` we store its result as a cached
 
 </details>
 
-## Tabulation {#tabulation}
+<details open>
+<summary><b>Tabulated Solution</b></summary>
+
+The tabulated solution will have an array of size n + 1. The idea is that we calculate and store the answer to a particular subproblem at it's cooresponding index. Ex: array[n] will be the stored answer of fib(n);
+
+#### Demonstration
+
+```js
+    n: 6 // 8
+        
+new [0, 1, 0, 0, 0, 0, 0] // initialize to length n+1, n[1] = 1
+
+// iterate with i = 2. Starting index is specific to Fib
+           v
+2:  [0 +1 =1, 0, 0, 0, 0] 
+              v
+3:  [0, 1 +1 =2, 0, 0, 0] 
+                 v
+4:  [0, 1, 1 +2 =3, 0, 0] 
+                    v
+5:  [0, 1, 1, 2 +3 =5, 0] 
+                       v
+6:  [0, 1, 1, 2, 3 +5 =8] 
+
+FIN:[0, 1, 1, 2, 3, 5, 8] 
+```
+
+The runtime complexity is O(n) and has a space complexity of O(n). Implementation in java:
+
+```java
+public int fib(int n) {
+    if (n <= 0)
+        return 0;
+    
+    int[] cache = new int[n + 1];
+    cache[1] = 1;
+    
+    for (int i = 2; i < cache.length; i++)
+        cache[i] = cache[i - 1] + cache[i - 2];
+    
+    return cache[n];
+}
+```
+
+</details>
+
+## Tabulation
 
 <!-- External Links  -->
 

@@ -1,5 +1,12 @@
-import React from 'react'
+import React from "react";
 
-export default function Nav() {
-    return <nav>nav</nav>
+export default function Nav({ links = [] }) {
+	return (
+		<nav>
+			Nav
+			{links.map((e, i) => (
+				<li key={e + i}>{e}</li>
+			))}
+		</nav>
+	);
 }

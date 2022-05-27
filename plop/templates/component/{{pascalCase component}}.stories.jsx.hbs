@@ -1,0 +1,49 @@
+import React from 'react';
+
+import { {{pascalCase component}} } from './{{pascalCase component}}';
+
+// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+export default {
+  title: 'components/{{pascalCase component}}',
+  component: {{pascalCase component}},
+  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+  argTypes: {
+    // backgroundColor: { control: 'color' }, TODO REPLACE THIS WITH YOUR OWN
+  },
+};
+
+// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
+const Template = (args) => <{{pascalCase component}} {...args} />;
+
+export const Light = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+/*
+Light.args = {
+  dark: 'false',
+  label: '{{pascalCase component}}',
+};
+
+export const Dark = Template.bind({});
+Dark.args = {
+  dark: 'true'
+  label: '{{pascalCase component}}',
+};
+*/
+
+export const Desktop = Template.bind({});
+Desktop.args = {
+  size: 'desktop',
+  label: '{{pascalCase component}}',
+};
+
+export const Tablet = Template.bind({});
+Tablet.args = {
+  size: 'tablet',
+  label: '{{pascalCase component}}',
+};
+
+export const Mobile = Template.bind({});
+Mobile.args = {
+  size: 'mobile',
+  label: '{{pascalCase component}}',
+};

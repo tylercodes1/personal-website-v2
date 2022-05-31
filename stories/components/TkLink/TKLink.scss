@@ -1,0 +1,9 @@
+@import "../../../styles/globals.scss";
+
+a {
+	list-style-type: none; /* Remove bullets */
+}
+
+a:hover {
+	color: $primary;
+}

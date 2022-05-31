@@ -12,6 +12,7 @@
 		"plop": "plop"
 	},
 	"dependencies": {
+		"dotenv": "^16.0.1",
 		"json3": "^3.3.3",
 		"next": "12.1.5",
 		"plop": "^3.1.0",

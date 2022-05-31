@@ -1,14 +1,14 @@
 import React from "react";
-import { Header } from "../Header/Header";
+import { StorybookHeader } from "../StorybookHeader/StorybookHeader";
 
-import "./page.scss";
+import "./storybookpage.scss";
 
-export const Page = () => {
+export const StorybookPage = () => {
 	const [user, setUser] = React.useState();
 
 	return (
 		<article>
-			<Header
+			<StorybookHeader
 				user={user}
 				onLogin={() => setUser({ name: "Jane Doe" })}
 				onLogout={() => setUser(undefined)}

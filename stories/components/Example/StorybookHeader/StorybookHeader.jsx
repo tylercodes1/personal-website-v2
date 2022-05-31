@@ -1,10 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Button } from "../StorybookButton/Button";
-import "./header.scss";
+import { StorybookButton } from "../StorybookButton/StorybookButton.jsx";
+import "./storybookheader.scss";
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
+export const StorybookHeader = ({
+	user,
+	onLogin,
+	onLogout,
+	onCreateAccount,
+}) => (
 	<header>
 		<div className="wrapper">
 			<div>
@@ -37,12 +42,20 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
 						<span className="welcome">
 							Welcome, <b>{user.name}</b>!
 						</span>
-						<Button size="small" onClick={onLogout} label="Log out" />
+						<StorybookButton
+							size="small"
+							onClick={onLogout}
+							label="Log out"
+						/>
 					</>
 				) : (
 					<>
-						<Button size="small" onClick={onLogin} label="Log in" />
-						<Button
+						<StorybookButton
+							size="small"
+							onClick={onLogin}
+							label="Log in"
+						/>
+						<StorybookButton
 							primary
 							size="small"
 							onClick={onCreateAccount}
@@ -55,13 +68,13 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
 	</header>
 );
 
-Header.propTypes = {
+StorybookHeader.propTypes = {
 	user: PropTypes.shape({}),
 	onLogin: PropTypes.func.isRequired,
 	onLogout: PropTypes.func.isRequired,
 	onCreateAccount: PropTypes.func.isRequired,
 };
 
-Header.defaultProps = {
+StorybookHeader.defaultProps = {
 	user: null,
 };

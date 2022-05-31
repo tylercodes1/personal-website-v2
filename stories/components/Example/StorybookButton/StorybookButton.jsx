@@ -1,11 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./button.scss";
+import "./storybookbutton.scss";
 
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
+export const StorybookButton = ({
+	primary,
+	backgroundColor,
+	size,
+	label,
+	...props
+}) => {
 	const mode = primary
 		? "storybook-button--primary"
 		: "storybook-button--secondary";
@@ -25,7 +31,7 @@ export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
 	);
 };
 
-Button.propTypes = {
+StorybookButton.propTypes = {
 	/**
 	 * Is this the principal call to action on the page?
 	 */
@@ -48,7 +54,7 @@ Button.propTypes = {
 	onClick: PropTypes.func,
 };
 
-Button.defaultProps = {
+StorybookButton.defaultProps = {
 	backgroundColor: null,
 	primary: false,
 	size: "medium",

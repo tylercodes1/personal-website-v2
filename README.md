@@ -1,16 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome to my [personal website!][website]
+_Built with  [Next.js][next] and [Storybook][storybook]_
+### Next.js Server
 
-## Getting Started
+<details>
+<summary>Run Next.js Server Locally</summary>
 
-First, run the development server:
+To run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](localhost) with your browser to see the landing page.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
@@ -26,9 +27,30 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+</details>
+
+### Storybook
+
+<details>
+<summary>Run Storybook Server Locally</summary>
+
+```bash
+yarn storybook
+```
+</details>
+<details>
+<summary>Build a Component</summary>
+</details>
 
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+<!-- Links -->
+[website]: https://www.tylerkim.dev
+[next]: https://nextjs.org/
+[storybook]: https://storybook.js.org/
+[localhost]: http://localhost:3000

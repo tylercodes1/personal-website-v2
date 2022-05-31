@@ -1,0 +1,16 @@
+@import "../../../styles/globals.scss";
+
+nav {
+	display: flex;
+	border-bottom: 2px solid $tint;
+	a {
+		list-style-type: none; /* Remove bullets */
+		padding: 0; /* Remove padding */
+		margin: 5px 20px;
+		font-weight: $link-fontweight;
+	}
+
+	a:hover {
+		color: $primary;
+	}
+}

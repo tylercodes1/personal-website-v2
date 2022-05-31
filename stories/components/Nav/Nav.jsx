@@ -1,11 +1,16 @@
 import React from "react";
 
+import Link from "next/link";
+
+import "./Nav.scss";
+
 export default function Nav({ links = [] }) {
 	return (
 		<nav>
-			Nav
 			{links.map((e, i) => (
-				<li key={e + i}>{e}</li>
+				<Link href={e.link} key={e + i}>
+					{e.name}
+				</Link>
 			))}
 		</nav>
 	);

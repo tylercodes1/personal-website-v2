@@ -2,7 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 
+import Nav from "../stories/components/Nav/Nav";
+
+import navLinks from "../resources/links/nav-links.json";
+
 export default function Home() {
+	console.log("links");
+	console.log(navLinks);
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -13,7 +19,7 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
+			<Nav links={navLinks} />
 			<main className={styles.main}>
 				<h1 className={styles.title}>
 					Hi, I&apos;m Tyler,

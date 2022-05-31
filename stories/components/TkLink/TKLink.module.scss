@@ -1,0 +1,17 @@
+// colors
+$primary: #0198d6;
+$tint: #80dafe;
+$shade: #015a7f;
+$dark: #001219;
+$light: #f5fcff;
+
+//
+$link-fontweight: 600;
+
+.a {
+	list-style-type: none; /* Remove bullets */
+}
+
+.a:hover {
+	color: $primary;
+}

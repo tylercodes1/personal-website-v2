@@ -1,5 +1,3 @@
-import React from "react";
-
 import Nav from "./Nav";
 
 import navLinks from "../../../resources/links/nav-links.json";

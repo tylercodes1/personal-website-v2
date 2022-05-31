@@ -1,16 +1,11 @@
-import React from "react";
-
-import Link from "next/link";
-
 import "./Nav.scss";
+import { TKLink } from "../TkLink/TKLink";
 
 export default function Nav({ links = [] }) {
 	return (
 		<nav>
 			{links.map((e, i) => (
-				<Link href={e.link} key={e + i}>
-					{e.name}
-				</Link>
+				<TKLink href={e.link} key={e + i} name={e.name} />
 			))}
 		</nav>
 	);

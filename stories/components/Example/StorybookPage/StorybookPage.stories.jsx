@@ -23,6 +23,6 @@ LoggedIn.play = async ({ canvasElement }) => {
 	const loginButton = await canvas.ByRole("button", {
 		name: /Log in/i,
 	});
-	console.log(loginButton);
+
 	await userEvent.click(loginButton);
 };

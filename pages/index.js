@@ -7,8 +7,6 @@ import Nav from "../stories/components/Nav/Nav";
 import navLinks from "../resources/links/nav-links.json";
 
 export default function Home() {
-	console.log("links");
-	console.log(navLinks);
 	return (
 		<div className={styles.container}>
 			<Head>

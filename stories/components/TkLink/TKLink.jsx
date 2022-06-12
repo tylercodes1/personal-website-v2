@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 export const TKLink = ({ href = "", key = "", name }) => {
-	console.log(href, key, name);
 	// internal
 	if (href.includes(process.env.DOMAIN))
 		return (
